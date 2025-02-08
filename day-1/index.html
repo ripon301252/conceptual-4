@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conceptual-4</title>
+</head>
+<body>
+    <script>
+        // --------------------------- part-1 -----------------------------
+        console.log(5, 'mahfuz', '5', true, false);
+
+        var me = 'mahfuz';
+        console.log(me)
+         me = 52;
+        console.log(me)
+         me = 23;
+        console.log(me)
+
+        // data types: number, string, boolean, undefined, null, NaN
+        var x = 5;
+        console.log(typeof x);
+
+        var y = '5';
+        console.log(typeof y);
+
+        var i = true;
+        console.log(typeof i);
+
+        var e = false;
+        console.log(typeof e);
+
+        var t = 
+        console.log(typeof t)
+
+        var z = null;
+        console.log(typeof z)
+
+        var m = NaN; // not a number (number chara onno kisu)
+        console.log(typeof m)
+
+        // isNaN is a mathod, not a data type (this is the check value)
+
+        // truthy value => true, 'hello', number
+        // falsy value => false, '', 0
+
+        // truthy & falsy value chack
+        var a = 5;
+        console.log(!!a)
+
+        var b = '';
+        console.log(!!b)
+
+
+        // variable naming convention
+        // possible
+        var Mahfuz;
+        var mahfuzr_rahman; // snake case
+        var mahfuzurRahman; // camel case
+        var MahfuzurRahman; // pascel case
+        var mahfuz1;
+
+        // not possible
+            // var class (can not use any reserved keyword)
+            // var 99;
+            // var 2mahfuz;
+            // var mahfuzur-Rahman;
+            // var @mahfuz
+
+        // good practice
+        var height;
+        var mahfuzurRahman; // camel case
+        var mahfuzr_rahman; // snake case
+
+        // --------------------------- part-2 -----------------------------------
+        // odd
+        var c = 5;
+        var d = 6;
+        var total = c + d
+        console.log(c + d, total);
+
+        // substruct
+        var total1 = d - c
+        console.log(d - c, total1)
+
+        // devide
+        var num2 = 10;
+        var num1 = 3;
+        var devider = num2 / num1;
+        console.log(devider, typeof devider);
+
+        var value = devider.toFixed(4);
+        console.log(value, typeof value);
+
+        var odd = 4 + parseFloat(value);
+        console.log(odd);
+
+        var odd2 = 4 + parseInt(value);
+        console.log(odd2);
+
+        var odd3 = 4 + Number(value);
+        console.log(odd3);
+
+        // multiple
+        var  multi = 3;
+        console.log(multi * 2)
+        console.log(multi ** 2)
+        console.log(multi ** 3)
+
+        // modulas %
+        console.log(10 / 3)
+        console.log(10 % 3)
+        console.log(10 % 2)
+        console.log(10 % 10)
+        console.log(8 % 10)
+
+        // short hand
+        var f = 5;
+        // f = f + 2;
+        console.log(f);
+
+        f += 2;
+        console.log(f);
+
+        f -= 2;
+        console.log(f);
+
+        // f += 1;
+        f++;
+        console.log(f);
+
+        // f -= 1;
+        f--;
+        console.log(f);
+
+        // isNaN()
+        // not number, and can not be transformed into number = true;
+        // number or can be transformed into number = false;
+        var g = 'Mahfuz';
+        console.log(isNaN(g));
+
+        var h = '50';
+        console.log(isNaN(h));
+
+        // assainment operator
+        var p1 = 6;
+        var p2 = 7;
+        var p3 = 6;
+        var p4 = '6';
+
+        // comperison operator(===, !==, >=, <=, >, <, &&, ||)
+        console.log(p1 === p2);
+        console.log(p1 === p3);
+        console.log(p1 !== p3);
+        console.log(p1 !== p2);
+        console.log(p1 >= p2);
+        console.log(p1 <= p2);
+        console.log(p1 > p2);
+        console.log(p1 < p2);
+
+        // difference between === and ==
+            // == check only values
+            // === check values with its data type
+            console.log(p1 == p4)
+            console.log(p1 === p4, typeof p1, typeof p4)
+
+    // ----------------- part-3 ----------------------------------- 
+    
+
+
+       
+
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
