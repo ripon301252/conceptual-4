@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        // --------------------------- part-1 -----------------------------
+    // --------------------------- part-1 -----------------------------
         console.log(5, 'mahfuz', '5', true, false);
 
         var me = 'mahfuz';
@@ -72,7 +72,7 @@
         var mahfuzurRahman; // camel case
         var mahfuzr_rahman; // snake case
 
-        // --------------------------- part-2 -----------------------------------
+    // --------------------------- part-2 -----------------------------------
         // odd
         var c = 5;
         var d = 6;
@@ -165,9 +165,52 @@
             console.log(p1 === p4, typeof p1, typeof p4)
 
     // ----------------- part-3 ----------------------------------- 
-    
+        // if, else is desison making
+
+        /* 
+            if(condition){
+                if true
+            }
+            else{
+                if false
+            }
+        */ 
+
+        var isRaining = false;
+
+        if(isRaining === false){
+            console.log('will go outside') // true block
+        }
+        else{
+            console.log('will not go outside') // false block
+        }
 
 
+        if(!isRaining){
+            console.log('will go outside') // true block
+        }
+        else{
+            console.log('will not go outside') // false block
+        }
+
+        // ternary syntex
+            // condition ? if true : if false
+
+            isRaining === false ? console.log('will go outside') : console.log('will not go outside');
+
+            !isRaining ?  console.log('will go outside') : console.log('will not go outside');
+        
+        // ---------------------------------- //
+        var money = 10;
+        var isRain = true;
+        var taxi = 15;
+
+        if(isRain === true && money >= taxi){
+            console.log('will go to market');
+        }
+        else{
+            console.log('will not go to market');
+        }
        
 
 
