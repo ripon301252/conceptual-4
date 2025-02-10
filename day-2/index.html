@@ -7,9 +7,87 @@
 </head>
 <body>
     <script>
+        //---------------part-1-----------------------------
         // Array
-        const numbers = [35, 'Rahul', true, NaN, -30, false];
-        console.log(numbers);
+        const array = [35, 'Rahul', true, NaN, -30, false];
+
+        console.log(
+        array,        // [35, 'Rahul', true, NaN, -30, false]
+        array.length, // 6
+        array[1],     // 'Rahul'
+        array[0],     // 35  
+        array[5],     // false  
+        array[2],     // true 
+        array[4],     // -30  
+        array[3]      // NaN  
+    );
+
+    array.push(100, 300);
+    console.log(array) // [35, 'Rahul', true, NaN, -30, false, 100, 300],
+
+    array.pop()
+    console.log(array) //  [35, 'Rahul', true, NaN, -30, false, 100]
+
+    const x = array.pop();
+    console.log(x); // 100
+    console.log(array); // [35, 'Rahul', true, NaN, -30, false]
+
+
+
+    // concatenate
+    const fruits = ['aam', 'jaam', 'kathal'];
+    const flowers = ['golap', 'joba', 'beli', 'sapla'];
+    const revers = ['sitolakkha', 'padma', 'jamuna'];
+    const akakar = fruits + flowers + revers; // not concatenate
+    const akakar1 = fruits.concat(flowers, revers);
+    const akakar2 = flowers.concat(revers, fruits);
+    console.log(fruits)     // ['aam', 'jaam', 'kathal'];
+    console.log(flowers);   // ['golap', 'joba', 'beli', 'sapla'];
+    console.log(revers);    // ['sitolakkha', 'padma', 'jamuna']
+    console.log(akakar);    // aam,jaam,kathalgolap,joba,beli,saplasitolakkha,padma,jamuna.
+    console.log(akakar1);   // ['aam', 'jaam', 'kathal', 'golap', 'joba', 'beli', 'sapla', 'sitolakkha', 'padma', 'jamuna']
+    console.log(akakar2);   // ['golap', 'joba', 'beli', 'sapla', 'sitolakkha', 'padma', 'jamuna', 'aam', 'jaam', 'kathal']
+    console.log(akakar1.length, akakar1[0]) // 10 aam
+
+    // search index no.
+    const find = akakar1.indexOf('joba'); 
+    console.log(find); // 4
+    const find1 = akakar1.indexOf('apple');
+    console.log(find1) // -1
+
+    // true, false
+    console.log(akakar2.includes('sapla')); // true
+    console.log(akakar2.indexOf('sapla'));  // 3
+    console.log(akakar2.includes('turag')); // false
+
+    // array to string by join
+    const join = fruits.join();
+    console.log(join) // aam,jaam,kathal
+    const join2 = fruits.join(' ');
+    console.log(join2);
+    const join1 = flowers.join();
+    console.log(join1) // golap,joba,beli,sapla
+    console.log(typeof join1) // string
+
+    // string to array by split
+    const convertToArray = join.split(' ');
+    console.log(convertToArray); // ['aam,jaam,kathal']
+
+
+     //---------------part-2-----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </script>
