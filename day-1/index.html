@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conceptual-4</title>
+    <title>coceptual-4-day-1</title>
 </head>
 <body>
     <script>
@@ -165,7 +165,7 @@
             console.log(p1 === p4, typeof p1, typeof p4)
 
     // ----------------- part-3 ----------------------------------- 
-        // if, else is desison making
+        // if, else is desison making (condition)
 
         /* 
             if(condition){
@@ -211,13 +211,103 @@
         else{
             console.log('will not go to market');
         }
-       
 
+        // ------------------------
 
+        if(isRain === true && money <= taxi){
+            console.log('will go to market');
+        }
+        else{
+            console.log('will not go to market');
+        }
 
+    // -------------------------------------------
 
-        
+        if(!isRain && money >= taxi ){
+            console.log('will go outside') // true block
+        }
+        else{
+            console.log('will not go outside') // false block
+        }
 
+        //-----------------------------------
+
+        if(isRain && money <= taxi ){
+            console.log('will go outside') // true block
+        }
+        else{
+            console.log('will not go outside') // false block
+        }
+        //-----------------
+
+        if(isRain === false || money <= taxi){
+            console.log('will go to market');
+        }
+        else{
+            console.log('will not go to market');
+        }
+        //----------------------
+        if(isRain === false || money >= taxi){
+            console.log('will go to market');
+        }
+        else{
+            console.log('will not go to market');
+        }
+        //-----------------------------------------
+
+        var money2 = 40;
+        if(money2 >= 100){
+            console.log('biryani khabo');
+        }
+        else if(money2 >=50){
+            console.log('noodls khabo');
+        }
+        else if(money2 >=30){
+            console.log('ruti kola khabo');
+        }
+        else{
+            console.log('na kheya thakbo');
+        }
+
+        // nested if else
+        var isRaining1 = true;
+        var haveUmbrella = true;
+
+        if(isRaining1 === true){
+            if(haveUmbrella === true){
+                console.log('will go outside, i have my umbrella');
+            }
+            else{
+                console.log('will not go outside, i have no my umbrella');
+            }
+        }
+        else{
+            console.log('will go out side.. its a sunny day')
+        }
+        //--------------------------
+        if(isRaining1 === true){
+            if(haveUmbrella === false){
+                console.log('will go outside, i have my umbrella');
+            }
+            else{
+                console.log('will not go outside, i have no my umbrella');
+            }
+        }
+        else{
+            console.log('will go out side.. its a sunny day')
+        }
+        //------------------------
+        if(isRaining1 === false){
+            if(haveUmbrella === false){
+                console.log('will go outside, i have my umbrella');
+            }
+            else{
+                console.log('will not go outside, i have no my umbrella');
+            }
+        }
+        else{
+            console.log('will go out side.. its a sunny day')
+        }
 
 
 
