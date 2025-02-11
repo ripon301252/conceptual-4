@@ -65,16 +65,29 @@
     console.log(join) // aam,jaam,kathal
     const join2 = fruits.join(' ');
     console.log(join2);
-    const join1 = flowers.join();
-    console.log(join1) // golap,joba,beli,sapla
+    const join1 = flowers.join(' ');
+    console.log(join1) // golap,joba,beli,sapla // golap joba beli sapla
     console.log(typeof join1) // string
+   
 
     // string to array by split
     const convertToArray = join.split(' ');
-    console.log(convertToArray); // ['aam,jaam,kathal']
+    console.log(convertToArray); // ['aam,jaam,kathal'];
+    const convertToArray1 = join.split('a');
+    console.log(convertToArray1);
+    console.log(typeof convertToArray);
+    console.log(Array.isArray(convertToArray)); // array check
+
+  
 
 
-     //---------------part-2-----------------------------
+     //------------------part-2-----------------------------
+     const split = join1.split('a');
+     console.log(split); // ['gol', 'p job', ' beli s', 'pl', '']
+
+    console.log(akakar1.slice(1,6))  //  ['jaam', 'kathal', 'golap', 'joba', 'beli']
+
+
 
 
 
