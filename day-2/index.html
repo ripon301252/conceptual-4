@@ -47,7 +47,7 @@
     console.log(akakar);    // aam,jaam,kathalgolap,joba,beli,saplasitolakkha,padma,jamuna.
     console.log(akakar1);   // ['aam', 'jaam', 'kathal', 'golap', 'joba', 'beli', 'sapla', 'sitolakkha', 'padma', 'jamuna']
     console.log(akakar2);   // ['golap', 'joba', 'beli', 'sapla', 'sitolakkha', 'padma', 'jamuna', 'aam', 'jaam', 'kathal']
-    console.log(akakar1.length, akakar1[0]) // 10 aam
+    console.log(akakar1.length, akakar1[0]) // 10, aam
 
     // search index no.
     const find = akakar1.indexOf('joba'); 
@@ -73,40 +73,210 @@
     // string to array by split
     const convertToArray = join.split(' ');
     console.log(convertToArray); // ['aam,jaam,kathal'];
-    const convertToArray1 = join.split('a');
-    console.log(convertToArray1);
-    console.log(typeof convertToArray);
-    console.log(Array.isArray(convertToArray)); // array check
+
+    const convertToArray1 = join.split('a'); 
+    console.log(convertToArray1); // ['', '', 'm,j', '', 'm,k', 'th', 'l']
+    console.log(typeof convertToArray); // object
+    console.log(Array.isArray(convertToArray)); // array check  (true)
 
   
-     //------------------part-2-----------------------------
+//------------------------part-2-----------------------------
 
     const split = join1.split('a');
     console.log(split); // ['gol', 'p job', ' beli s', 'pl', '']
 
-    console.log(akakar1.slice(1,6))  //  ['jaam', 'kathal', 'golap', 'joba', 'beli']
+    console.log(akakar1.slice(1, 6))  //  ['jaam', 'kathal', 'golap', 'joba', 'beli']
 
     revers.unshift('kodom', 'gadha')   
-    console.log(revers);
+    console.log(revers); // ['kodom', 'gadha', 'sitolakkha', 'padma', 'jamuna']
 
     flowers.shift()
-    console.log(flowers)
-
-    // loop
+    console.log(flowers); //['joba', 'beli', 'sapla']
 
 
+    //------loop------- loop------------loop--------loop-------- (repet)
+    // for loop
+    /*
+        for(starting value; end condition; increament or decrement){
+            console.log('Mahfuz', i)
+        }
+    */
+    
+        for(let i = 1; i <= 5; i++){
+            console.log('Mahfuz', i);
+        }
+
+console.log('---------------------------------------------')
+
+        for(let i = 0; i < akakar1.length; i++){
+            console.log(akakar1[i], i)
+        }
+
+console.log('---------------------------------------------')
+
+        for(let i = 0; i <= akakar1.length-1; i++){
+            console.log(akakar1[i], i)
+        }
+
+console.log('---------------------------------------------')
+
+        for(let i = akakar1.length-1; i >= 0; i--){
+            console.log(akakar1[i], i)
+        }
+
+console.log('---------------------------------------------')
+       
+//------------------------ part-3 -----------------------------
+
+   // while loop
+    /*
+        let i = 0;
+        while(conditiion){
+            task
+            looping increament or decreament
+        };        
+    */
+    
+   let i = 0;
+   while(i < akakar2.length){
+        console.log(akakar2[i], i)
+        i++
+   }
+
+console.log('---------------------------------------------')
+
+   let n = akakar2.length-1
+   while(n >= 0){
+        console.log(akakar2[n], n);
+        n--;
+   }
+
+console.log('---------------------------------------------')
+
+   // for of loop
+   /*
+        for(let item of akakar2){
+            console.log(item)
+        }
+   */
+  
+  for(let item of akakar2){
+        console.log(item);
+  }
+
+console.log('---------------------------------------------')
+
+  for(let item of akakar2.reverse()){
+        console.log(item);
+  }
 
 
+  
+    // nested loop
+    for(let i = 1; i <= 5; i++){
+        console.log('hello from i', i);
+        for(let j = 1; j <= 5; j++){
+            console.log('hello j', j);
+        }
+    }
+
+console.log('---------------------------------------------')
+
+    // problem solved
+        //sum of array numbers
+        const numbers = [1, 2, 3, 4, 5, 6, 7];
+        let sum = 0;
+        for(let item of numbers){
+            // sum = sum + item;
+            sum += item;
+        }
+        console.log('Sum of number is :',sum);
+
+console.log('---------------------------------------------')   
+
+        // even of array numbers
+        const j = 6;
+        console.log('modulas check', j % 2 === 0);
+    //-------------------------------
+        let evens = []
+        let sum1 = 0;
+        for(let item of numbers){
+            if(item % 2 === 0){
+                evens.push(item);
+                sum1 = sum1 + item
+            }
+        }
+        console.log('Even number is :', evens,'&', 'Even numbers sum is :',sum1);
+
+console.log('---------------------------------------------')  
+        
+        let odd = [];
+        sum2 = 0;
+        for(let item of numbers){
+            if(item % 2 === 1){
+                odd.push(item)
+                sum2 = sum2 + item
+            } 
+
+            // if(item % 2 !== 0){
+            //     odd.push(item)
+            //     sum2 = sum2 + item
+            // }
+        }
+        console.log('Odd number is :', odd, '&', 'Odd numbers sum is :', sum2);
+
+console.log('---------------------------------------------')        
+
+        // Object
+        const person = {
+            name : 'Mahfuz',
+            address : 'Chandpur',
+            age : 33
+        }
+        // ----------------Dot notation--------------------
+        person.contactNumber = '016-26607121'
+        person.name = 'Amena'
+        console.log(person, person.name, person.address, person.contactNumber); // {name: 'Amena', address: 'Chandpur', contactNumber: '016-26607121'} 'Amena' 'Chandpur' '016-26607121'
+
+        // property delete
+        delete person.contactNumber
+        console.log(person) // {name: 'Amena', address: 'Chandpur'}
+
+        // property 
+        const keys = Object.keys(person);
+        console.log(keys)
+
+        // values
+        const value = Object.values(person);
+        console.log(value)
+
+        // -------------------------breack notation---------------------------
+        console.log(person['name'])
 
 
+console.log('---------------------------------------------')   
 
+        // Break  
+        for(let i = 0; i < numbers.length; i++){
+        //     console.log(numbers[i])
+        // console.log('---------------------')
+            if(numbers[i] === 5){
+                break;
+            }
+            console.log(numbers[i])
+        }
 
+console.log('---------------------------------------------')   
 
-
-
-
-
-
+        // continue
+        for(let i = 0; i < numbers.length; i++){
+            console.log(numbers[i])
+        console.log('---------------------')
+            if(numbers[i] === 5){
+                continue;
+            }
+            console.log(numbers[i])
+        }
 
 
 
