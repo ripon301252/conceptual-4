@@ -6,6 +6,136 @@
     <title>coceptual-4-day-3</title>
 </head>
 <body>
+    <script>
+    // -------------------- part-1 ---------------------
+        // function : this is the 'block of code'
+        function showName(){
+            console.log('Amena');
+        }
+        showName()
+
+console.log('------------------------------------------')
+
+        function showName1(name, age, address){  // parameter
+            console.log(name,age,address);
+        }
+        showName1('mahfuz', 32, 'Chandpur') // Argument
+        showName1('Amena', 21, 'kumilla') // Argument
+
+console.log('------------------------------------------')
+
+        function add(x, y){
+            const total = x + y;
+            console.log(total)
+        }
+        add(5, 9);
+
+console.log('------------------------------------------')
+
+        function giveName(){
+            const x = 'Mahfuz'
+            return x;
+        }
+       const myName = giveName()
+       console.log(myName);
+
+console.log('------------------------------------------')
+
+       /*
+                        type of function is 4
+        --------------------------------------------------------   
+       */
+        // 1. No parameters No return 
+            function show(){
+                console.log('Hello');
+            }
+            show();
+        
+console.log('------------------------------------------')
+
+        // 2. parameters with no return
+        function add1(x, y){
+            const total = x + y;
+            console.log(total);
+        }
+        add1(5, 9);
+
+console.log('------------------------------------------')
+
+        // 3. No parameters but return
+        function giveName(){
+            const x = 'Amena'
+            return x;
+        }
+       const isName = giveName()
+       console.log(isName);
+
+console.log('------------------------------------------')
+
+        // 4. parameters with return
+            function giveDouble(x){
+                return x * 2;
+            }
+            const double = giveDouble(25);
+            console.log(double);
+
+console.log('------------------------------------------')
+
+        /*  Problem-1: 
+        Array te kisu number ase, big number ta ber koro  */
+            const numbers = [2, 4, 21, 5, 6, 23, 20, 9];
+            console.log('biggest number is:', Math.max(...numbers))
+        /*
+            let biggest number = 2 
+                check = 2 to 4
+            biggest = 4 
+                check = 4 to 21
+            biggest = 21 
+                check = 21 to 5
+            biggest = 21
+                check = 21 to 6
+            biggest = 21
+                check = 21 to 23
+            biggest = 23
+                check = 23 to 20
+            biggest = 23 
+                check = 23 to 9
+            biggest = 23 
+        */
+// -------------------- part-2 ---------------------
+            let biggest = numbers[0]
+            console.log('before loop:', biggest)
+            for(let i = 1; i < numbers.length; i++){
+                console.log('current number:', numbers[i], 'biggest was number:', biggest)
+                if(numbers[i] > biggest){
+                    biggest = numbers[i]
+                }
+                console.log('current biggest:', biggest)
+            }
+            console.log('After loop', biggest)
+
+console.log('------------------------------------------')
+
+            function givBiggestNumber(array){
+                let biggest = array[0]
+                for(let i = 1; i < array.length; i++){
+                    if(array[i] > biggest){
+                        biggest = array[i];
+                    }
+                }
+                return biggest;
+            }
+            const prices = [25, 36, 52, 2, 5, 98];
+            const result = givBiggestNumber(numbers);
+            console.log('biggest number is:', result);
+
+
+            // 22:06
+
+
+
+
+    </script>
     
 </body>
 </html>
