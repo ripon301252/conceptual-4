@@ -81,8 +81,9 @@ console.log('------------------------------------------')
 
 console.log('------------------------------------------')
 
-        /*  Problem-1: 
-        Array te kisu number ase, big number ta ber koro  */
+        /*  Problem-1 
+            Array te kisu number ase, big number ta ber koro  
+        */
             const numbers = [2, 4, 21, 5, 6, 23, 20, 9];
             console.log('biggest number is:', Math.max(...numbers))
         /*
@@ -117,6 +118,15 @@ console.log('------------------------------------------')
 console.log('------------------------------------------')
 
             function givBiggestNumber(array){
+
+                if(Array.isArray(array)){
+                    console.log('this is an array')
+                }
+
+                if(!Array.isArray(array)){
+                    return('this is not an array')
+                }
+
                 let biggest = array[0]
                 for(let i = 1; i < array.length; i++){
                     if(array[i] > biggest){
@@ -126,11 +136,136 @@ console.log('------------------------------------------')
                 return biggest;
             }
             const prices = [25, 36, 52, 2, 5, 98];
-            const result = givBiggestNumber(numbers);
+            const result = givBiggestNumber(prices);
             console.log('biggest number is:', result);
 
+            const booloan = true;
+            const result1 = givBiggestNumber(booloan);
+            console.log(result1);
 
-            // 22:06
+console.log('------------------------------------------')
+
+        /* Problem-2
+           output : My name is Mahfuz, I live in Bangladesh 
+        */
+       function showInfo(info){
+            /*
+                if(typeof info === 'object'){
+                    return 'This is a valid object..!';
+                }
+            */
+
+            if(typeof info !== 'object'){
+                return 'please provide a valid object..!';
+            }
+           
+            const result = 'My name is ' + info.name + ',' + ' I live in' + info.country + '.';
+            return result
+       }
+
+        const person = {
+            name:'Mahfuz',
+            country:'Bangladesh'
+        }
+
+        const x = showInfo(person);
+        console.log(x);
+        // const y = showInfo('hello');
+        // console.log(y);
+
+console.log('------------------------------------------')
+
+        /* Problem-3
+           output : mahfuzurrahman0012@gmail.com
+        */
+
+        const email = {
+            name : 'mahfuzurrahman',
+            number : '0012',
+            address : 'gmail'
+        }
+// -------------------- part-3 ---------------------
+        function creatEmail(info){
+
+            if(typeof info !== 'object'){
+                return 'invalid object'
+            }
+
+            const result = info.name + info.number + '@' + info.address + '.com';
+            return result;
+        }
+        console.log(creatEmail(email));
+
+console.log('------------------------------------------');        
+
+        /* Problem-4 
+
+           House Rent = 5000, 
+           meal cost = 3000, 
+           personal cost = 2000, 
+           savings from monthly income = ? 
+        */
+        
+        function calculateSavings(income){
+
+            if(typeof income !== "number"){
+                return "invalid input";
+            }
+
+            const houseRent = 5000;
+            const mealCost = 3000;
+            const personalCost = 2000;
+            const totalCost = houseRent + mealCost + personalCost;
+
+            if(totalCost > income){
+                return "Earn More..!"
+            }
+
+            const savings = income - totalCost;
+            return savings;
+        }
+        const monthlySavings = calculateSavings(5000) ;
+        console.log(monthlySavings);
+
+
+        /* Problem-5 
+           ekta array er vitor koyta boolean value ase ta count koro 
+        */
+       const m = [2, true, 'hello', false, null, NaN, 34, {name: "mahfuz"}, true, false];
+
+       function countBoolean(array){
+            if(!Array.isArray(array)){
+                return "plz provide valid array"
+            }
+
+            let count = 0;
+
+            for(let item of array){
+                if(typeof item === 'boolean'){
+                    count++
+                }
+            }
+            return count;
+       }
+       const booleanCount = countBoolean(m)
+       console.log(booleanCount);
+
+
+        /* Problem-6 
+           ekta array er vitor koyta boolean value ase ta count koro 
+        */
+
+
+       // 21: 22
+
+
+
+
+
+
+
+
+
 
 
 
