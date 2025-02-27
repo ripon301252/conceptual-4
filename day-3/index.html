@@ -79,9 +79,9 @@ console.log('------------------------------------------')
             const double = giveDouble(25);
             console.log(double);
 
-console.log('------------------------------------------')
+console.log('------------------Problem solved satar------------------------')
 
-        /*  Problem-1 
+        /* --------------------- Problem-1 -------------------------
             Array te kisu number ase, big number ta ber koro  
         */
             const numbers = [2, 4, 21, 5, 6, 23, 20, 9];
@@ -107,10 +107,13 @@ console.log('------------------------------------------')
             let biggest = numbers[0]
             console.log('before loop:', biggest)
             for(let i = 1; i < numbers.length; i++){
+
                 console.log('current number:', numbers[i], 'biggest was number:', biggest)
+
                 if(numbers[i] > biggest){
                     biggest = numbers[i]
                 }
+
                 console.log('current biggest:', biggest)
             }
             console.log('After loop', biggest)
@@ -145,7 +148,7 @@ console.log('------------------------------------------')
 
 console.log('------------------------------------------')
 
-        /* Problem-2
+        /* --------------------------- Problem-2 -----------------------------------
            output : My name is Mahfuz, I live in Bangladesh 
         */
        function showInfo(info){
@@ -175,7 +178,7 @@ console.log('------------------------------------------')
 
 console.log('------------------------------------------')
 
-        /* Problem-3
+        /* -------------------------------- Problem-3 ----------------------------
            output : mahfuzurrahman0012@gmail.com
         */
 
@@ -198,7 +201,7 @@ console.log('------------------------------------------')
 
 console.log('------------------------------------------');        
 
-        /* Problem-4 
+        /* --------------------- Problem-4 ----------------------
 
            House Rent = 5000, 
            meal cost = 3000, 
@@ -224,11 +227,12 @@ console.log('------------------------------------------');
             const savings = income - totalCost;
             return savings;
         }
-        const monthlySavings = calculateSavings(5000) ;
+        const monthlySavings = calculateSavings(1500) ;
         console.log(monthlySavings);
 
+console.log('------------------------------------------')
 
-        /* Problem-5 
+        /* ---------------------- Problem-5 -------------------------
            ekta array er vitor koyta boolean value ase ta count koro 
         */
        const m = [2, true, 'hello', false, null, NaN, 34, {name: "mahfuz"}, true, false];
@@ -248,15 +252,102 @@ console.log('------------------------------------------');
             return count;
        }
        const booleanCount = countBoolean(m)
-       console.log(booleanCount);
+       console.log('total boolean is:',booleanCount);
 
-
-        /* Problem-6 
-           ekta array er vitor koyta boolean value ase ta count koro 
+console.log('------------------------------------------')
+        /* ----------------------- Problem-6 ----------------------
+           bus = 50 sit;
+           micro = 15 sit; 
+           rickshaw cost = 20 tk; 
+            
+           borjatri = 234;
+           bus (4) = 200, remainnig = 34;
+           micro (2) = 30, remaining = 4;
+           rickshaw (4) = 20 * 4 = 80taka
         */
 
+        function rickshawVara(peoples){
+            const bus = 50;     // 50 sit fullfil holee bus sarbe
+            const micro = 15;   // 15 sit fullfil holee micro sarbe 
+            const rickshawCost = 20; // bakira rickshaw te jabe
 
-       // 21: 22
+            const remainingAfterBus = peoples % bus;
+            // return remainingAfterBus;
+            const remainingAfterMicro = remainingAfterBus % micro
+            return remainingAfterMicro * rickshawCost
+        }
+        // const remainingAfterBus = rickshawVara(234)
+        console.log('rickshawVara', rickshawVara(234), 'taka');
+
+console.log('------------------------------------------')
+
+        /* ---------------- Problem-7 ----------------- */
+        const person1 = {
+            name : "Abul kashem",
+            honors : 40,
+            hsc : 30,
+            isFFfamily: true,
+        }
+
+        const person2 = {
+            name : "kodom ali",
+            honors : 45,
+            hsc : 32,
+            isFFfamily: false,
+        }
+        const person3 = {
+            name : "kodom ali",
+            honors : 45,
+            hsc : 35,
+            isFFfamily: false,
+        }
+        const person4 = {
+            name : "kodom ali",
+            honors : 25,
+            hsc : 30,
+            isFFfamily: true,
+        }
+
+
+        function jobSelection(info){
+
+            if(typeof info !== 'object'){
+                return 'invalid object'
+            }
+
+            let totalMarks = info.honors + info.hsc;
+
+            if(info.isFFfamily){
+                totalMarks = totalMarks + (totalMarks * 0.2);
+            }
+
+            // console.log(totalMarks);
+
+            // if(totalMarks >= 80){
+            //     return 'you got the job';
+            // }
+            // else{
+            //     return 'you faild';
+            // }
+
+// -------------------- part-4 ----------------------------
+
+            if(info.isFFfamily && totalMarks >= 80){
+                return "Aho vatija aho... chakri to tomari";
+            }
+            else if(info.isFFfamily && totalMarks < 80){
+                return "bad luck vatija... next time..."
+            }
+            else if(!info.isFFfamily && totalMarks >= 80){
+                return "you got the job"
+            }
+            else if(!info.isFFfamily && totalMarks < 80){
+                return "Rajaker rajaker"
+            }
+        }
+        console.log(jobSelection(person1));
+      
+       
 
 
 
